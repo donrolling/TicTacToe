@@ -52,5 +52,10 @@ namespace TicTacToeDisplay {
 			var winner = player1Winner.HasValue ? (player1Winner.Value ? "X" : "O") : "Cat";
             Console.WriteLine($"The game is over { winner } wins!");
 		}
-	}
+
+        public string RequestCommand()
+		{
+			return Console.ReadLine();
+		}
+    }
 }

@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Threading;
 using TicTacToeDisplay;
+using TicTacToeEngine;
 
-namespace TicTacToeEngine {
-	class Program {
-		static void Main(string[] args) {
-			var game = new TicTacToe(new ConsoleDisplay());
-			game.Start(string.Empty);
-			while (!game.Quit) {
-				var command = game.RequestCommand();
-				game.Instruct(command);
-			}
-			Console.WriteLine("Goodbye!");
-			Thread.Sleep(5000);
-		}
-	}
+namespace TicTacToeConsole
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            var gameStateEngine = new GameStateEngine(new ConsoleDisplay());
+            var gameState = gameStateEngine.Start();
+            while (!gameState.Quit)
+            {
+                var command = gameStateEngine.RequestCommand();
+                gameStateEngine.Instruct(gameState, command);
+            }
+            Console.WriteLine("Goodbye!");
+            Thread.Sleep(3000);
+        }
+    }
 }

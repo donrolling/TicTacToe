@@ -54,7 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Gametest.cs" />
+    <Compile Include="GameTests.cs" />
     <Compile Include="MockDisplay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,10 +62,6 @@
     <ProjectReference Include="..\TicTacToeEngine\TicTacToeEngine.csproj">
       <Project>{ff1e4675-15fe-46d9-9fc5-aad1e2324fbb}</Project>
       <Name>TicTacToeEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TicTacToe\TicTacToeDisplay.csproj">
-      <Project>{325c5592-a488-4475-aa11-ce7ff9ae3be8}</Project>
-      <Name>TicTacToeDisplay</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

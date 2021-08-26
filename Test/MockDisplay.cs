@@ -2,10 +2,11 @@
 using TicTacToeEngine;
 
 namespace Test {
-	/// <summary>
-	/// This class intentionally does nothing. This make it easier to test with.
-	/// </summary>
-	public class MockDisplay : IDisplay {
+    /// <summary>
+    /// This class intentionally does nothing. This make it easier to test with.
+    /// </summary>
+    public class MockDisplay : IDisplay
+    {
 		public void GameOverMessage(bool? player1Winner) {
 			
 		}
@@ -29,5 +30,10 @@ namespace Test {
 		public void MoveInstructions(bool player1Turn) {
 			
 		}
-	}
+
+        public string RequestCommand()
+		{
+			return "";
+		}
+    }
 }
