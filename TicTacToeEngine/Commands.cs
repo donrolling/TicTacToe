@@ -1,6 +1,8 @@
-﻿namespace TicTacToeEngine {
-	public enum Commands {
-		Quit,
-		New
-	}
+﻿namespace TicTacToeEngine
+{
+    public enum Commands
+    {
+        Quit,
+        New
+    }
 }

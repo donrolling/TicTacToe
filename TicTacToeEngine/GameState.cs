@@ -10,11 +10,11 @@
         public bool? Player1Winner { get; set; }
 
         private bool _quit;
+
         public bool Quit
         {
             get { return _quit || GameOver; }
             set { _quit = value; }
         }
-
     }
 }
